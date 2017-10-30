@@ -20,6 +20,12 @@ var todos = [
     responsible: 'Sebastian',
     description: 'My third description',
     priority: 'high'
+  },
+  {
+    title: 'My fourth todo',
+    responsible: 'Sebastian',
+    description: 'My fourth description',
+    priority: 'high'
   }
 ]
 
