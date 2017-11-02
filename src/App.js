@@ -49,6 +49,7 @@ class App extends Component {
               <h4 className="list-group-item-heading">{todo.title} <span className="badge badge-info">{todo.priority}</span></h4>
               <p>User: {todo.responsible}</p>
               <p>{todo.description}</p>
+              <button className="btn btn-danger btn-sm">Delete</button>
             </li>
           )}
         </ul>
