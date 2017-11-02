@@ -43,6 +43,13 @@ class App extends Component {
     return (
       <div className="container">
         <h4>Todo Count: <span className="badge badge-primary">{this.state.todos.length}</span></h4>
+        <ul className="list-group">
+          {this.state.todos.map((todo, index) =>
+            <li className="list-group-item" key={index}>
+              <h4 className="list-group-item-heading">{todo.title}</h4>
+            </li>
+          )}
+        </ul>
       </div>
     );
   }
