@@ -46,7 +46,7 @@ class App extends Component {
         <ul className="list-group">
           {this.state.todos.map((todo, index) =>
             <li className="list-group-item" key={index}>
-              <h4 className="list-group-item-heading">{todo.title}</h4>
+              <h4 className="list-group-item-heading">{todo.title} <small><span className="label label-info">{todo.priority}</span></small></h4>
             </li>
           )}
         </ul>
