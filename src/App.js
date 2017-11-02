@@ -48,6 +48,7 @@ class App extends Component {
             <li className="list-group-item" key={index}>
               <h4 className="list-group-item-heading">{todo.title} <span className="badge badge-info">{todo.priority}</span></h4>
               <p>User: {todo.responsible}</p>
+              <p>{todo.description}</p>
             </li>
           )}
         </ul>
