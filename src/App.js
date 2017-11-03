@@ -39,6 +39,12 @@ class App extends Component {
     };
   }
 
+  removeTodo(index){
+    this.setState({
+      todos: this.state.todos.filter((e, i) => i !== index)
+    })
+  }
+
   render() {
     return (
       <div className="container">
@@ -49,7 +55,7 @@ class App extends Component {
               <h4 className="list-group-item-heading">{todo.title} <span className="badge badge-info">{todo.priority}</span></h4>
               <p>User: {todo.responsible}</p>
               <p>{todo.description}</p>
-              <button className="btn btn-danger btn-sm">Delete</button>
+              <button className="btn btn-danger btn-sm" onClick={this.removeTodo.bind(this, index)}>Delete</button>
             </li>
           )}
         </ul>
