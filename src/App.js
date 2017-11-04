@@ -48,6 +48,8 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <TodoInput></TodoInput>
+        <hr/>
         <h4>Todo Count: <span className="badge badge-primary">{this.state.todos.length}</span></h4>
         <ul className="list-group">
           {this.state.todos.map((todo, index) =>
@@ -59,6 +61,39 @@ class App extends Component {
             </li>
           )}
         </ul>
+      </div>
+    );
+  }
+}
+
+class TodoInput extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: '',
+      responsible: '',
+      description: '',
+      priority: 'Lowest'
+    }
+  }
+  render() {
+    return(
+      <div>
+        <h4>Add New Todo</h4>
+        <form className="form-horizontal" onSubmit={this.handlSubmit}>
+          <div className="form-group">
+            <label htmlFor="inputTodoTitle" className="col-sm-2 control-label"></label>
+            <div className="col-sm-10">
+              <input name="todoTitle"
+                     type="text"
+                     className="form-control"
+                     id="inputTodoTitle"
+                     value={this.state.title}
+                     onChange={this.handleInputChange}
+                     placeholder="Title"></input>
+            </div>
+          </div>
+        </form>
       </div>
     );
   }
